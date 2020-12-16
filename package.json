@@ -1,0 +1,31 @@
+{
+  "name": "middlewareexample",
+  "version": "1.0.0",
+  "description": "basic example of middleware made with nodejs",
+  "main": "webapp.js",
+  "scripts": {
+    "start": "nodemon webapp.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berchj/middlewareExample.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "express"
+  ],
+  "author": "Julio Bermudez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berchj/middlewareExample/issues"
+  },
+  "homepage": "https://github.com/berchj/middlewareExample#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
