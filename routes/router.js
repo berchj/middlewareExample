@@ -4,26 +4,32 @@ const router = express.Router();
 
 router.use(middleware);
 
-router.get('/',(req,res)=>{                                      
-                                res.status(200).send({
-                                    message: 'main-page',
-                                    browser: req.headers['user-agent'],
-                                    prefix: req.originalUrl,
-                                    url: req.url,
-                                    method: req.method,
-                                    IP: req.connection.remoteAddress,
-                                });
+router.get('/',(req,res)=>{                                     
+    res.status(200).send({
+        message: `a request was made with status ${res.statusCode}`,
+        browser: req.headers['user-agent'],
+        date: new Date().toLocaleDateString(),
+        prefix: req.originalUrl,
+        status: res.statusCode,
+        headers: req.headers,
+        url: req.url,
+        method: req.method,
+        IP: req.connection.remoteAddress,
+    });   
 });
 
 router.post('/',(req,res)=>{
-                                res.status(200).send({
-                                    message: 'main-page',
-                                    browser: req.headers['user-agent'],
-                                    prefix: req.originalUrl,
-                                    url: req.url,
-                                    method: req.method,
-                                    IP: req.connection.remoteAddress,                                   
-                                });
+    res.status(200).send({
+        message: `a request was made with status ${res.statusCode}`,
+        browser: req.headers['user-agent'],
+        date: new Date().toLocaleDateString(),
+        prefix: req.originalUrl,
+        status: res.statusCode,
+        headers: req.headers,
+        url: req.url,
+        method: req.method,
+        IP: req.connection.remoteAddress,
+    });    
 });
 
-module.exports = router;
+module.exports = router; 
